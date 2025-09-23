@@ -1,4 +1,6 @@
 #include "Prerequisitos.h"
+#include "Ticket.h"
+#include "GestorDeTickets.h"
 
 
 

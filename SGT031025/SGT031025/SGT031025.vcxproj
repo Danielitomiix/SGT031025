@@ -164,7 +164,9 @@
     <ClCompile Include="source\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="include\GestorDeTickets.h" />
     <ClInclude Include="include\Prerequisitos.h" />
+    <ClInclude Include="include\Ticket.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
