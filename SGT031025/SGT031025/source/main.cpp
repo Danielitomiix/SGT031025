@@ -3,9 +3,9 @@
 #include "GestorDeTickets.h"
 
 
-
-
 int 
 main() {
+
+
 	return 0;
 }
