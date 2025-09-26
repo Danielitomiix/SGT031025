@@ -2,10 +2,7 @@
 #include "Ticket.h"
 #include "GestorDeTickets.h"
 
-
-int 
-main() {
-
-
-	return 0;
+int main() {
+    GestorDeTickets gestor;
+    return 0;
 }

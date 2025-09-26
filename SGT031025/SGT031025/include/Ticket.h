@@ -73,18 +73,33 @@ public:
 		m_descripcion = Descripcion;
 	}
 
-	/** @brief Modifica el estado del ticket */
-	void 
-	setEstado(EstadoTicket Estado) {
-		m_estado = Estado;
+	bool 
+	cambiarEstado(EstadoTicket nuevoEstado) {
+		switch (m_estado) {
+			case PENDIENTE:
+				if (nuevoEstado == EnProgreso) {
+					m_estado = nuevoEstado;
+					return true;
+				}
+				break;
+			case EnProgreso:
+				if (nuevoEstado == PENDIENTE || nuevoEstado == COMPLETADO) {
+					m_estado = nuevoEstado;
+					return true;
+				}
+				break;
+			case COMPLETADO:
+				// No se puede cambiar el estado si ya esta completado
+				return false;
+		}
+		return false; // Cambio de estado no permitido
 	}
 
 	/**
 	* @brief Muestra toda la informacion del ticket en consola.
 	*/
 	void 
-	mostrarTicket() 
-		const {
+	mostrarTicket() const {
 		std::cout << "ID: " << m_id << "\n"   
 				  << "Titulo: " << m_titulo << "\n"
 				  << "Descripcion: " << m_descripcion << "\n"
