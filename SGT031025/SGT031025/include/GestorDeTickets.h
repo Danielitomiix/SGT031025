@@ -68,7 +68,9 @@ public:
 	 */
 	bool
 	eliminarTicket(int id) {
-		for (auto it = m_tickets.begin(); it != m_tickets.end(); ++it) {
+		for (auto it = m_tickets.begin();
+			        it != m_tickets.end(); 
+							++it) {
 			if (it->getId() == id) {
 				m_tickets.erase(it);
 				return true;
@@ -79,7 +81,7 @@ public:
 
 
 private:
-	std::vector<Ticket> m_tickets; /**< Vector que almacena los tickets gestionados */
+	std::vector<Ticket> m_tickets; /** El vector almacena los tickets gestionados */
 
 };
 

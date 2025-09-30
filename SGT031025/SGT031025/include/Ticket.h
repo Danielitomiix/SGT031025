@@ -73,6 +73,9 @@ public:
 		m_descripcion = Descripcion;
 	}
 
+	/**
+	* @brief Valida que el cambio de estado sea permitido y lo realiza.
+	*/
 	bool 
 	cambiarEstado(EstadoTicket nuevoEstado) {
 		switch (m_estado) {
