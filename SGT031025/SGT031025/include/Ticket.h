@@ -23,7 +23,8 @@ public:
 	Ticket(int id, const std::string& titulo,
 		   const std::string& descripcion,
 		   EstadoTicket estado) :
-		   m_id(id), m_titulo(titulo),
+		   m_id(id), 
+		   m_titulo(titulo),
 		   m_descripcion(descripcion),
 		   m_estado(estado) {
 		   m_fechaHora.getFechaHora();
@@ -104,9 +105,9 @@ public:
 	void 
 	mostrarTicket() const {
 		std::cout << "ID: " << m_id << "\n"   
-				  << "Titulo: " << m_titulo << "\n"
-				  << "Descripcion: " << m_descripcion << "\n"
-				  << "Estado: " << estadoToString(m_estado) << "\n"
+				      << "Titulo: " << m_titulo << "\n"
+				      << "Descripcion: " << m_descripcion << "\n"
+				      << "Estado: " << estadoToString(m_estado) << "\n"
 		          << "Fecha y Hora: " << m_fechaHora.toString() << "\n";
 	}
 
