@@ -39,7 +39,8 @@ public:
 	/** @brief Obtiene el ID del ticket */
 	int 
 	getId() 
-	const { return m_id; }
+	const { 
+		return m_id; }
 	
 	/** @brief Obtiene el titulo del ticket */
 	std::string 
